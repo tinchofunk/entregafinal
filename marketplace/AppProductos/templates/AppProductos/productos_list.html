@@ -1,0 +1,25 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h3>productos</h3>
+    <ul>
+        {% for producto in object_list %}
+    
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        producto : {{producto.producto}} 
+        </a>
+            
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="{% url 'Detail_producto' producto.id %}">Ver</a></li>
+            <li><a class="dropdown-item" href="{% url 'Edit_producto' producto.id %}">Editar</a></li>
+            <li><a class="dropdown-item" href="{% url 'Delete_producto' producto.id %}">Borrar</a></li>
+            </ul>
+    
+       
+            
+            
+    {% endfor %}
+
+{% endblock %}

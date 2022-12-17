@@ -1,0 +1,20 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h3>stock</h3>
+    <ul>
+        {% for codigo in object_list %}
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Codigo numero ({{codigo.codigo}})
+            </A>
+           
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="{% url 'Detail_stock' codigo.id %}">Ver</a></li>
+            <li><a class="dropdown-item" href="{% url 'Edit_stock' codigo.id %}">Editar</a></li>
+            <li><a class="dropdown-item" href="{% url 'Delete_stock' codigo.id %}">Borrar</a></li>
+            </ul>
+        {% endfor %}
+
+{% endblock %}

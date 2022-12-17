@@ -1,0 +1,19 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Busqueda de Stock</h1>
+<form action="/buscars/" method="get">{% csrf_token %}
+    
+    <input type="text" name="codigo" id="codigo" placeholder="ingresar codigo" >
+    <input type="submit" value="Buscar">
+
+
+
+ </form>
+
+  
+
+{% endblock %}

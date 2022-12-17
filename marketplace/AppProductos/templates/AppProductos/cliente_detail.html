@@ -1,0 +1,12 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+cliente: {{cliente.usuario}}<p>
+fecha_alta: {{cliente.fecha_alta}}<p>
+
+<a href="{%url 'List_cliente'%}">Regresar</a>
+
+{% endblock %}

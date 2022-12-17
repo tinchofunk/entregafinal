@@ -1,0 +1,12 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<p>precio u$s: {{stock.precio}}   </p>
+<p>codigo Nro: {{stock.codigo}} </p>
+
+<a href="{%url 'List_stock'%}">Regresar</a>
+
+{% endblock %}

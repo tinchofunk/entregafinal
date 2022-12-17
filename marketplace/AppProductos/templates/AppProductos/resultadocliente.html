@@ -1,0 +1,23 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<p>Estamos buscando el usuario: {{ usuario }}</p>
+
+
+<ul>
+    {%for usuario in usuarios %}
+        <li>usuario: {{usuario.usuario}}</li>
+        <li>fecha_alta: {{usuario.fecha_alta}}</li>
+        
+    {%endfor%}
+</ul>  
+
+<a href="{%url 'busqueda_cliente'%}">
+    <button type="button" >Buscar otro cliente</button></a>
+
+
+{% endblock %}

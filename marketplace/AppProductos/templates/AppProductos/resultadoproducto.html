@@ -1,0 +1,22 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<p>Estamos buscando el producto: {{ producto }}</p>
+
+
+<ul>
+    {%for producto in productos %}
+        <li>producto: {{producto.producto}}</li>
+        <li>categoria: {{producto.categoria}}</li>
+        
+    {%endfor%}
+</ul>  
+
+<a href="{%url 'busqueda_producto'%}">
+    <button type="button" >Buscar otro producto</button></a>
+
+{% endblock %}

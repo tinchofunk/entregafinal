@@ -1,0 +1,26 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1 style="color: rgb(228, 55, 150);" >Carga de  productos</h1>
+    
+
+    <p> 
+        Ingrese un producto y una categoria 
+    </p>
+    Ingresar un producto:
+    <br>
+    <form action=""    method="post">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+
+     
+
+{% endblock %}

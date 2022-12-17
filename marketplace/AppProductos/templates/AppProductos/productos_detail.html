@@ -1,0 +1,12 @@
+{% extends "AppProductos/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+producto: {{productos.producto}}<p></p>
+categoria: {{productos.categoria}}<p></p>
+
+<a href="{%url 'List_producto'%}">Regresar</a>
+
+{% endblock %}
